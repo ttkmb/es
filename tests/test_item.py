@@ -25,3 +25,10 @@ def test_len_name():
     with pytest.raises(AssertionError):
         assert some_item.name == '1234567891'
 
+def test_repr():
+    item1 = Item("Смартфон", 10000, 20)
+    assert repr(item1) == "Item('Смартфон', 10000, 20)"
+
+def test_str():
+    item1 = Item("Смартфон", 10000, 20)
+    assert str(item1) == 'Смартфон'
